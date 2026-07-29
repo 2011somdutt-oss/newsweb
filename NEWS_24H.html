@@ -1,0 +1,909 @@
+
+<html>
+<head>
+
+    <title>News 24H | Har Khabar Har Samay</title>
+<link href="picture/newspic.jpeg" rel="icon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#f5f5f5;
+}
+
+
+
+.top-header{
+    background:#111;
+    color:#fff;
+    padding:8px 0;
+    font-size:14px;
+}
+
+.top-header a{
+    color:#fff;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.logo{
+    font-size:45px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:red;
+}
+
+.navbar .nav-link
+{
+    color:white !important;
+    font-weight:600;
+    margin:0 8px;
+}
+
+.navbar .nav-link:hover{
+    color:yellow;
+}
+
+
+.breaking-news{
+    background:#111;
+    color:white;
+    display:flex;
+    align-items:center;
+}
+
+.breaking-title{
+    background:red;
+    padding:10px 20px;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+marquee{
+    padding:10px;
+}
+
+.main-news{
+    position:relative;
+}
+
+.main-news img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.news-content{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    color:white;
+}
+
+.news-content h2{
+    font-size:40px;
+    font-weight:bold;
+}
+
+.side-news img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.side-news{
+    background:#fff;
+    padding:10px;
+    box-shadow:0 0 8px rgba(0,0,0,.15);
+}
+
+.side-news h5{
+    margin-top:10px;
+    font-size:18px;
+}
+.section-title h2{
+    font-size:32px;
+    font-weight:700;
+    border-left:6px solid red;
+    padding-left:12px;
+}
+
+.news-card{
+    transition:0.3s;
+    border:none;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+
+
+.news-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+
+.trend-card{
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+
+
+.trend-card img{
+    width:100%;
+    height:220px;
+    
+}
+
+.sidebar{
+    background:#fff;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.sidebar h3{
+    border-left:5px solid red;
+    padding-left:10px;
+    margin-bottom:20px;
+}
+
+.list-group-item{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.list-group-item:hover{
+    background:red;
+    color:#fff;
+}
+
+
+
+
+
+
+.category-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+
+
+.category-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.category-content{
+    padding:15px;
+}
+
+.category-content h4{
+    font-weight:bold;
+}
+
+
+
+.gallery-img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.5);
+}
+
+.video-news{
+    background:#1187fc;
+    
+}
+
+
+
+
+
+
+
+.footer{
+    background:#111;
+    color:#fff;
+    padding:50px 0;
+}
+
+.footer h3,
+.footer h4{
+    margin-bottom:20px;
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin:10px 0;
+}
+
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.footer a{
+    color:#fff;
+    margin-right:15px;
+}
+
+.footer a:hover{
+    color:red;
+}
+
+/* Responsive */
+@media(max-width:768px)
+{
+
+.logo{
+    font-size:30px;
+    text-align:center;
+}
+
+.news-content h2{
+    font-size:24px;
+}
+
+.main-news img{
+    height:300px;
+}
+
+.side-news img{
+    height:180px;
+}
+
+}
+.back-btn{
+    background:#0d6efd;
+    color:#fff !important;
+    border-radius:6px;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#084298;
+    transform:translateY(-3px);
+}
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    padding:10px 18px;
+    display:block;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    background:#59b8f4;
+    color:#fff;
+    border-radius:5px;
+}
+
+    </style>
+</head>
+
+<body>
+<div class="container-fluid col-lg-12 col-lg-3 col-sm-6 col-md-4 col-md-12 bg-light" style="min-height: 600px;">
+<div class="row">
+<!-- Top Header -->
+<div class="top-header">
+    <div class="container d-flex justify-content-between">
+        <span>Wednesday 20 May 2026</span>
+
+        <div>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Logo Section start -->
+<div class="container ">
+    <div class="row align-items-center">
+
+        <div class="col-lg-6">
+            <h1 class="logo">
+                NEWS <span>24H</span>
+            </h1>
+            <h3>Har Khabar Har Samay</h3>
+        </div>
+
+        <div class="col-lg-1 all">
+            <img src="picture/newspic.jpeg" height="10px" class="img-fluid one" alt="">
+        </div>
+
+        <div class="col-lg-5">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search News...">
+                <button class="btn btn-danger">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- logo section end-->
+
+<!-- Navbar start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container">
+
+        <button class="navbar-toggler" data-bs-toggle="collapse"
+        data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+    <a class="nav-link back-btn" href="NEWS_24H.html">
+        <i class="fa-solid fa-arrow-left"></i> Back
+    </a>
+</li>  
+
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="home_page.html">India</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="world_page.html">World</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="politics.html">Politics</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="bussines_page.html">Business</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="sport.html">Sports</a></li>
+
+                
+                <li class="nav-item"><a class="nav-link" href="#">Education</a></li>
+                
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+<!--navbar end-->
+
+
+
+<!-- Breaking News start-->
+<div class="breaking-news">
+    <div class="container">
+        <span class="breaking-title">BREAKING NEWS</span>
+
+        <marquee>
+            India wins T20 Series | Sensex crosses 85,000 |
+            Heavy Rain Alert in Uttar Pradesh |
+            ISRO announces new satellite mission |
+            CBSE releases latest notice
+        </marquee>
+    </div>
+</div>
+<!-- Breaking News end-->
+
+<!-- Hero Section start-->
+<section class="hero">
+    <div class="container">
+        <div class="row">
+<!-- Hero Section end-->
+        
+
+            <!-- Main News start -->
+            <div class="col-lg-8">
+
+                <div class="main-news">
+
+                    <img src="picture/news1.jpeg" class="img-fluid">
+
+                    <div class="news-content">
+                        <span class="badge bg-danger">Top News</span>
+
+                        <h2>Jantar Mantar Protest : Thousands Demand Justice Over NEET 2026</h2>
+
+                        <p>
+                            Students across India raise voice against paper leak and demand fair examination system.
+                        </p>
+                        20 May 2026 | India
+                    </div>
+
+                </div>
+
+            </div>
+    <!-- Main News end-->
+
+            <!-- Side News start-->
+            <div class="col-lg-4">
+
+                <div class="side-news mb-3">
+
+                    <img src="picture/WhatsApp Image 2026-07-24 at 7.45.31 AM.jpeg" class="img-fluid">
+
+                    <h5>Monsoon Session Of Parliament Beging, Opposition Protest </h5>
+                    20 May 2026
+
+                </div>
+
+                <div class="side-news mb-3">
+
+                    <img src="picture/WhatsApp Image 2026-07-24 at 7.45.32 AM.jpeg" class="img-fluid">
+
+                    <h5>Sensex Crosses 85,000 Mark , Nifty At All-Time High</h5>
+                    20 May 2026
+
+                </div>
+
+                <div class="side-news">
+
+                    <img src="picture/WhatsApp Image 2026-07-24 at 7.45.46 AM.jpeg" class="img-fluid">
+
+                    <h5>Team India Wins Series Against Australia 3-1 Match</h5>
+                    20 May 2026
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+ <!-- Side News end-->
+
+<!-- Latest News  start-->
+<section class="latest-news py-5">
+    <div class="container">
+
+        <div class="section-title mb-4">
+            <h2>Latest News</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card news-card">
+                    <img src="picture/WhatsApp Image 2026-07-24 at 7.45.47 AM (1).jpeg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="badge bg-danger">India</span>
+                        <h5 class="card-title mt-2">Government launches new scheme</h5>
+                        <p class="card-text">Read complete details about the latest government initiative.</p>
+                        <a href="#" class="btn btn-danger btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card news-card">
+                    <img src="picture/WhatsApp Image 2026-07-24 at 7.45.49 AM.jpeg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="badge bg-primary">Sports</span>
+                        <h5 class="card-title mt-2">India wins exciting match</h5>
+                        <p class="card-text">Team India secures another thrilling victory.</p>
+                        <a href="#" class="btn btn-danger btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card news-card">
+                    <img src="picture/WhatsApp Image 2026-07-24 at 7.45.45 AM (1).jpeg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="badge bg-success">Technology</span>
+                        <h5 class="card-title mt-2">New AI technology launched</h5>
+                        <p class="card-text">Latest AI innovation changes the tech industry.</p>
+                        <a href="#" class="btn btn-danger btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card news-card">
+                    <img src="picture/WhatsApp Image 2026-07-24 at 7.45.32 AM.jpeg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Business</span>
+                        <h5 class="card-title mt-2">Stock market reaches new high</h5>
+                        <p class="card-text">Sensex and Nifty continue their upward trend.</p>
+                        <a href="#" class="btn btn-danger btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Trending News -->
+<section class="trending py-5">
+<div class="container">
+
+<div class="row">
+
+<!-- Left Side -->
+<div class="col-lg-8">
+
+<h2 class="section-title mb-4">Trending News</h2>
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+<div class="trend-card">
+<img src="picture/WhatsApp Image 2026-07-24 at 7.45.51 AM.jpeg" class="img-fluid">
+<div class="p-3">
+<span class="badge bg-danger">Trending</span>
+<h4 class="mt-2">Heavy Rain Alert Across India</h4>
+<p>IMD issues rainfall warning in several states.</p>
+<a href="#" class="btn btn-danger btn-sm">Read More</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 mb-4">
+<div class="trend-card">
+<img src="picture/WhatsApp Image 2026-07-24 at 7.45.44 AM (1).jpeg" class="img-fluid">
+<div class="p-3">
+<span class="badge bg-primary">Technology</span>
+<h4 class="mt-2">AI is Changing the Future</h4>
+<p>Artificial Intelligence is growing rapidly.</p>
+<a href="#" class="btn btn-danger btn-sm">Read More</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- Sidebar -->
+<div class="col-lg-4">
+
+<div class="sidebar">
+
+<h3>Popular News</h3>
+
+<ul class="list-group">
+
+<li class="list-group-item">
+🔥 India wins T20 Series
+</li>
+
+<li class="list-group-item">
+📈 Sensex crosses record level
+</li>
+
+<li class="list-group-item">
+🚀 ISRO launches new satellite
+</li>
+
+<li class="list-group-item">
+💻 New AI Tool Released
+</li>
+
+<li class="list-group-item">
+⚽ Football Championship Starts
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+
+
+<!-- Category News -->
+<section class="category-news py-5">
+<div class="container">
+
+<h2 class="section-title mb-4">Top Categories</h2>
+
+<div class="row g-4">
+
+<!-- India -->
+<div class="col-lg-3 col-md-6">
+<div class="category-card">
+<img src="picture/WhatsApp Image 2026-07-24 at 7.45.49 AM.jpeg" class="img-fluid">
+<div class="category-content">
+<h4>🇮🇳 India</h4>
+<p>Latest national headlines and updates.</p>
+<a href="#" class="btn btn-outline-danger btn-sm">View All</a>
+</div>
+</div>
+</div>
+
+<!-- World -->
+<div class="col-lg-3 col-md-6">
+<div class="category-card">
+<img src="picture/WhatsApp Image 2026-07-24 at 7.45.48 AM.jpeg" class="img-fluid">
+<div class="category-content">
+<h4>🌍 World</h4>
+<p>International news from around the globe.</p>
+<a href="#" class="btn btn-outline-danger btn-sm">View All</a>
+</div>
+</div>
+</div>
+
+<!-- Sports -->
+<div class="col-lg-3 col-md-6">
+<div class="category-card">
+<img src="picture/WhatsApp Image 2026-07-24 at 7.45.46 AM.jpeg" class="img-fluid">
+<div class="category-content">
+<h4>⚽ Sports</h4>
+<p>Cricket, football and all sports updates.</p>
+<a href="#" class="btn btn-outline-danger btn-sm">View All</a>
+</div>
+</div>
+</div>
+
+<!-- Technology -->
+<div class="col-lg-3 col-md-6">
+<div class="category-card">
+<img src="picture/WhatsApp Image 2026-07-24 at 7.45.45 AM (1).jpeg" class="img-fluid">
+<div class="category-content">
+<h4>💻 Technology</h4>
+<p>Latest gadgets and AI technology news.</p>
+<a href="#" class="btn btn-outline-danger btn-sm">View All</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+
+
+
+<!-- Photo Gallery -->
+<section class="gallery py-5">
+    <div class="container">
+
+        <h2 class="section-title mb-4">Photo Gallery</h2>
+
+        <div class="row g-3">
+
+            <div class="col-lg-3 col-md-6 col-6">
+                <img src="picture/om.jpg" class="gallery-img" alt="">
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6">
+                <img src="picture/WhatsApp Image 2026-07-24 at 7.45.47 AM.jpeg" class="gallery-img" alt="">
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6">
+                <img src="picture/WhatsApp Image 2026-07-24 at 7.45.50 AM.jpeg" class="gallery-img" alt="">
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6">
+                <img src="picture/WhatsApp Image 2026-07-24 at 7.45.48 AM.jpeg" class="gallery-img" alt="">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Video News -->
+<section class="video-news py-5 bg-light">
+    <div class="container">
+
+        <h2 class="section-title mb-4">Video News</h2>
+
+        <div class="row">
+
+            <div class="col-lg-6 mb-4">
+                <iframe width="100%" height="315"
+                    src="picture/nesvideo.mp4"
+                    title="YouTube video"
+                    allowfullscreen allow="autoplay;">
+                </iframe>
+            </div>
+
+            <div class="col-lg-6">
+                <h3>Today's Top Video</h3>
+                <p>
+                    Watch the latest news highlights, breaking stories,
+                    and important updates from India and around the world.
+                </p>
+
+                <a href="#" class="btn btn-danger">
+                    Watch More Videos
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="video-news py-5 bg-light">
+    <div class="container">
+
+        <h2 class="section-title mb-4">Video News</h2>
+
+        <div class="row">
+
+            <div class="col-lg-6 mb-4">
+                <iframe width="100%" height="315"
+                    src="picture/nesvideo.mp4"
+                    title="YouTube video"
+                    allowfullscreen allow="autoplay;">
+                </iframe>
+            </div>
+
+            <div class="col-lg-6">
+                <h3>Today's Top Video</h3>
+                <p>
+                    Watch the latest news highlights, breaking stories,
+                    and important updates from India and around the world.
+                </p>
+
+                <a href="#" class="btn btn-danger">
+                    Watch More Videos
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section class="video-news py-5 bg-light">
+    <div class="container">
+
+        <h2 class="section-title mb-4">Video News</h2>
+
+        <div class="row">
+
+            <div class="col-lg-6 mb-4">
+                <iframe width="100%" height="315"
+                    src="picture/nesvideo.mp4"
+                    title="YouTube video"
+                    allowfullscreen allow="autoplay;">
+                </iframe>
+            </div>
+
+            <div class="col-lg-6">
+                <h3>Today's Top Video</h3>
+                <p>
+                    Watch the latest news highlights, breaking stories,
+                    and important updates from India and around the world.
+                </p>
+
+                <a href="#" class="btn btn-danger">
+                    Watch More Videos
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-4">
+                <h3>NEWS 24H</h3>
+                <p>Har Khabar Har Samay</p>
+                <p>Your trusted source for the latest news from India and around the world.</p>
+            </div>
+
+            <div class="col-lg-4">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4">
+                <h4>Follow Us</h4>
+
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-x-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center">
+            © 2026 NEWS 24H | All Rights Reserved
+        </p>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</body>
+</html>
